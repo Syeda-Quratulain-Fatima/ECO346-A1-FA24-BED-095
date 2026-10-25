@@ -44,10 +44,12 @@ p2 <- ggplot(dd, aes(x = logearn, weight = hhweight)) +
        x = "Annual earnings (Rs, log scale)",
        y = "Density per log10 unit",
        caption = paste0("Source: PSLM 2019-20 person file. Sample: earners aged 15-64, ",
-                        "Balochistan urban (n = ", nrow(d), "). Weighted by hhweight. ",
+                        "Balochistan urban (n = ", nrow(d), "). Weighted by hhweight.\n",
                         nrow(d) - nrow(dd), " earners outside Rs 10,000-10,000,000 excluded.")) +
   theme_minimal() +
-  theme(plot.title = element_text(face = "bold", size = 12, hjust = 0.5),        plot.caption = element_text(size = 8, hjust = 0))
+  theme(plot.title = element_text(face = "bold", size = 12, hjust = 0.5),
+        plot.caption = element_text(size = 8, hjust = 0),
+        plot.margin = margin(10, 30, 10, 10))
 
 p2
 ggsave("figures/distribution.svg", p2, width = 8, height = 5)
