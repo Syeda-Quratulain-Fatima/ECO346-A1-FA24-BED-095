@@ -1,5 +1,4 @@
-# ECO346-A1-FA24-BED-095
-# ECO346 Assignment 1: Earnings and age in urban Balochistan
+# ECO346 Assignment 1: Earnings and age in Urban Balochistan
 
 **Name:** Syeda Quratulain Fatima | **Reg No:** FA24-BED-095 | **Section:** A
 **Variant:** 95 = 11 x 8 + 7, so variant 7: Balochistan urban (prov_code 4, urban_rural 2).
