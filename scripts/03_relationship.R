@@ -28,10 +28,10 @@ p3 <- ggplot(d, aes(age, earn_annual)) +
   geom_point(data = bands, aes(x = mid, y = wmean, shape = thin),
              colour = "firebrick", size = 3.5, stroke = 1.2) +
   scale_shape_manual(values = c(`FALSE` = 16, `TRUE` = 1), guide = "none") +
-  annotate("text", x = peak$mid, y = peak$wmean,
+  annotate("text", x = peak$mid + 2, y = peak$wmean,
            label = paste0("Highest band: ages ", peak$band,
                           "\nRs ", comma(peak$wmean_rs)),
-           vjust = -0.8, fontface = "bold", colour = "firebrick") +
+           hjust = 1, vjust = -0.8, fontface = "bold", colour = "firebrick") +
   scale_y_log10(limits = c(1e4, 1e7), breaks = 10^(4:7),
                 labels = c("10,000", "100,000", "1,000,000", "10,000,000")) +
   scale_x_continuous(limits = c(14, 65), breaks = seq(15, 65, by = 5)) +
@@ -45,7 +45,8 @@ p3 <- ggplot(d, aes(age, earn_annual)) +
                         "hollow markers: fewer than 30 earners in the band.")) +
   theme_minimal() +
   theme(plot.title = element_text(face = "bold", size = 12, hjust = 0.5),
-        plot.caption = element_text(size = 8, hjust = 0))
+        plot.caption = element_text(size = 8, hjust = 0),
+        plot.margin = margin(10, 20, 10, 10))
 
 p3
 ggsave("figures/relationship.svg", p3, width = 8, height = 5.5)
