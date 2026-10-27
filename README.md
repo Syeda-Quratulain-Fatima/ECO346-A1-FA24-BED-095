@@ -1,6 +1,6 @@
 # ECO346 Assignment 1: Earnings and age in Urban Balochistan
 
-**Name:** Syeda Quratulain Fatima | **Reg No:** FA24-BED-095 | **Section:** A
+**Name:** Syeda Quratulain Fatima | **Reg No:** FA24-BEDS-095 | **Section:** A
 **Variant:** 95 = 11 x 8 + 7, so variant 7: Balochistan urban (prov_code 4, urban_rural 2).
 **Data:** PSLM 2019-20 person file merged with the household file by hhid. Sample: earners aged 15-64 with earn_annual > 0 (n = 486). All statistics weighted by hhweight.
 
